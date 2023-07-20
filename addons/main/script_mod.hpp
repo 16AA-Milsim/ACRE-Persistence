@@ -1,5 +1,5 @@
 #define MAINPREFIX z
-#define PREFIX TAG
+#define PREFIX l6AA
 
 #include "script_version.hpp"
 
@@ -9,7 +9,7 @@
 #define REQUIRED_VERSION 1.88
 
 #ifdef COMPONENT_BEAUTIFIED
-    #define COMPONENT_NAME QUOTE(TAG - COMPONENT_BEAUTIFIED)
+    #define COMPONENT_NAME QUOTE(l6AA - COMPONENT_BEAUTIFIED)
 #else
-    #define COMPONENT_NAME QUOTE(TAG - COMPONENT)
+    #define COMPONENT_NAME QUOTE(l6AA - COMPONENT)
 #endif

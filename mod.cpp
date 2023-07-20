@@ -1,7 +1,7 @@
-dir = "@MOD_NAME";
-name = "My Cool Mod";
+dir = "@ACRE_QOL";
+name = "ACRE Radio saving";
 
-author = "Your Name";
+author = "16 Air Assault Milsim Community";
 
 picture         = "title_co.paa";           // Picture displayed from the expansions menu. Optimal size is 2048x1024
 hideName        = "false";                  // Hide the extension name
@@ -14,8 +14,8 @@ tooltip         = "Tip of the morning";
 tooltipOwned    = "Who sold this to you?";  // Tool tip displayed when the mouse is left over, in the main menu
 overview        = "Best Mod ever!";         // Overview text, displayed from the extension menu
 description     = "It's unclear where this will show"; // Probably in context with action
-action          = "https://www.ehre.to";    // Website URL, that can accessed from the expansions menu 
-actionName      = "today?";                 // label of button/tooltip in extension menu
+action          = "https://16aa.net";    // Website URL, that can accessed from the expansions menu 
+actionName      = "Website";                 // label of button/tooltip in extension menu
 
 // Color used for DLC stripes and backgrounds (RGBA)
 dlcColor[] =

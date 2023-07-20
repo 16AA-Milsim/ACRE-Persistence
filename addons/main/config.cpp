@@ -8,8 +8,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {  };
-        authors = {"Your Name", "Other Author"}; // sub array of authors, considered for the specific addon
-        author = "TAG Team"; // primary author name, either yours or your team's, considered for the whole mod
+        authors = {"Frederiksen", "Karlsson", "Mueller"}; // sub array of authors, considered for the specific addon
+        author = "16 Air Assault Milsim Community"; // primary author name, either yours or your team's, considered for the whole mod
         VERSION_CONFIG;
     };
 };
@@ -17,17 +17,17 @@ class CfgPatches {
 // information on the whole mod (only needed once)
 class CfgMods {
     class PREFIX {
-        dir = "@MOD_NAME";
-        name = "My Cool Mod";
+        dir = "@ACRE_QOL";
+        name = "ACRE Radio saving";
         
-        author = "Your Name";
+        author = "16 Air Assault Milsim Community";
 
         picture         = "title_co.paa";       // Picture displayed from the expansions menu. Optimal size is 2048x1024
         hideName        = "false";              // Hide the extension name in main menu and extension menu
         hidePicture     = "false";              // Hide the extension picture in the extension menu
 
-        action          = "https://www.ehre.to"; // Website URL, that can accessed from the expansions menu 
-        actionName      = "today?";              // label of button/tooltip in extension menu
+        action          = "https://16aa.net"; // Website URL, that can accessed from the expansions menu 
+        actionName      = "Website";              // label of button/tooltip in extension menu
         description     = "It's unclear where this will show"; // Probably in context with action
 
         // Color used for DLC stripes and backgrounds (RGBA)

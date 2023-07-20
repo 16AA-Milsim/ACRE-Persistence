@@ -1,0 +1,1 @@
+#include "\z\l6AA\addons\acre\script_component.hpp"
