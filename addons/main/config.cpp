@@ -3,7 +3,7 @@
 // information on this addon specifically
 class CfgPatches {
     class ADDON {
-        name = COMPONENT_NAME;
+        name = main;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -17,7 +17,7 @@ class CfgPatches {
 // information on the whole mod (only needed once)
 class CfgMods {
     class PREFIX {
-        dir = "@ACRE_QOL";
+        dir = "@ACRE-Persistance";
         name = "ACRE Radio saving";
         
         author = "16 Air Assault Milsim Community";

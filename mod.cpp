@@ -1,4 +1,4 @@
-dir = "@ACRE_QOL";
+dir = "@ACRE-Persistance";
 name = "ACRE Radio saving";
 
 author = "16 Air Assault Milsim Community";
