@@ -1,5 +1,5 @@
 dir = "@ACRE-Persistance";
-name = "ACRE Radio saving";
+name = "ACRE-Persistance";
 
 author = "16 Air Assault Milsim Community";
 

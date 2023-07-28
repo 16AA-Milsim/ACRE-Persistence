@@ -3,12 +3,12 @@
 // information on this addon specifically
 class CfgPatches {
     class ADDON {
-        name = main;
+        name = "MAIN";
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {  };
-        authors = {"Frederiksen", "Karlsson", "Mueller"}; // sub array of authors, considered for the specific addon
+        authors[] = {"Frederiksen", "Karlsson", "Mueller"}; // sub array of authors, considered for the specific addon
         author = "16 Air Assault Milsim Community"; // primary author name, either yours or your team's, considered for the whole mod
         VERSION_CONFIG;
     };
@@ -18,7 +18,7 @@ class CfgPatches {
 class CfgMods {
     class PREFIX {
         dir = "@ACRE-Persistance";
-        name = "ACRE Radio saving";
+        name = "ACRE-Persistance";
         
         author = "16 Air Assault Milsim Community";
 
