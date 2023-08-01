@@ -3,7 +3,7 @@
 // information on this addon specifically
 class CfgPatches {
     class ADDON {
-        name = "MAIN";
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -17,8 +17,8 @@ class CfgPatches {
 // information on the whole mod (only needed once)
 class CfgMods {
     class PREFIX {
-        dir = "@ACRE-Persistance";
-        name = "ACRE-Persistance";
+        dir = "@ACRE-Persistence";
+        name = "ACRE-Persistence";
         
         author = "16 Air Assault Milsim Community";
 
