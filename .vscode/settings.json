@@ -1,0 +1,5 @@
+{
+    "sqflint.warnings": false,
+    "sqflint.indexWorkspaceTwice": false,
+    "sqflint.indexWorkspace": false
+}

@@ -5,15 +5,15 @@ class CfgVehicles {
             class ACRE_Interact {
                 class RadioSettings {
                     displayName = "Radio Settings";
-                    class Instructions {
+                    class showInstructions {
                         displayName = "Instructions";
                         condition = "true";
-                        statement = "call acre_api_fnc_openRadioSettings";
+                        statement = QUOTE(call FUNC(showInstructions));
                     };
-                    class showSavedRadios {
+                    class showSavedRadioSettings {
                         displayName = "Show Saved Radio Settings";
                         condition = "true";
-                        statement = "call acre_api_fnc_showSavedRadios";
+                        statement = QUOTE(call FUNC(showSavedRadioSettings));
                     };
                     class restoreRadioSettings 
                     {
@@ -22,7 +22,7 @@ class CfgVehicles {
                         {
                             displayName = "<t color='#98d7ff'>Confirm</t>";
                             condition = "true";
-                            statement = "call acre_api_fnc_restoreRadioSettings";
+                            statement = QUOTE(call FUNC(restoreRadioSettings));
                         };
                     };
                     class saveRadioSettings 
@@ -32,7 +32,7 @@ class CfgVehicles {
                         {
                             displayName = "<t color='#ffa4a4'>Confirm</t>";
                             condition = "true";
-                            statement = "call acre_api_fnc_saveRadioSettings";
+                            statement = QUOTE(call FUNC(saveRadioSettings));
                         };
                     };
                 };
