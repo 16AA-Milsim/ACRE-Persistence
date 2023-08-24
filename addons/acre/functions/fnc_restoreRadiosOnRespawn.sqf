@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 //restore radio settings on respawn
 player addEventHandler ["Respawn",
     {        

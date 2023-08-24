@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 //Restore radios on respawn?
 [
     QGVAR(restoreRadiosOnRespawn),

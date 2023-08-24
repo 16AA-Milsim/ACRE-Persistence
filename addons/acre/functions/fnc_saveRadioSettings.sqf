@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 private _baseRadios = [];
 private _channels = [];
 private _volumes = [];

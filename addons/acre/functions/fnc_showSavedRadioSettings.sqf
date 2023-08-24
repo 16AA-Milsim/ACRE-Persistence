@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 // Get the profileNamespace Radio Settings variables
 private _baseRadios = profileNamespace getVariable [QGVAR(baseRadios), []];
 private _channels = profileNamespace getVariable [QGVAR(channels), []];

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 // get saved variables/arrays from profileNamespace
 private _baseRadios = profileNamespace getVariable [QGVAR(baseRadios), []];
 private _channels = profileNamespace getVariable [QGVAR(channels), []];
