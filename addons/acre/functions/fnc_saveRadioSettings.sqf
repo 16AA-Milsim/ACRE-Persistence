@@ -11,10 +11,7 @@ private _pttAssignment = call acre_api_fnc_getMultiPushToTalkAssignment;
 
 // Check if the player is carrying any radios, if not, show the hint and exit
 if (count _radios == 0) exitWith {
-	hint "There are no radios in your inventory";
-	 [{
-		hintSilent "";
-	}, [], 3] call CBA_fnc_waitAndExecute; // Clear hint
+	["acre_persistence", "ACRE Persistence", "You are not carrying any radios", "Nothing to save", -1, [1, 0.8, 0, 1]] call acre_sys_list_fnc_displayHint;
 };
 
 // Rearrange the radios in the _radios array to set the PTT radios first
@@ -57,4 +54,4 @@ profileNamespace setVariable [QGVAR(channels), _channels];
 profileNamespace setVariable [QGVAR(volumes), _volumes];
 profileNamespace setVariable [QGVAR(spatials), _spatials];
 
-hint "Radio Settings Saved";
+["acre_persistence", "ACRE Persistence", "Radio Settings Saved", "", -1, [0.13, 0.61, 0.12, 1]] call acre_sys_list_fnc_displayHint;

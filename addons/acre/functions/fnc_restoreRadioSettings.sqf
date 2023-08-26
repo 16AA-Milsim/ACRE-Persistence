@@ -11,10 +11,7 @@ private _radios = [] call acre_api_fnc_getCurrentRadioList;
 
 // if player has no radios, exit with hint
 if (count _radios == 0) exitWith {
-	hint "You are not carrying any radios";
-	[{
-		hintSilent "";
-	}, [], 3] call CBA_fnc_waitAndExecute; // Clear hint
+	["acre_persistence", "ACRE Persistence", "You are not carrying any radios", "", -1, [1, 0.29, 0.16, 1]] call acre_sys_list_fnc_displayHint;
 };
 
 // Reorder _radios array to match _baseRadios placing to be PTT1 PTT2 and PTT3 radios first

@@ -8,7 +8,7 @@
         "Restore radios on respawn",
         "Setting does nothing at the moment."
     ],    
-    "ACRE2-Persistence",
+    "ACRE2 Persistence",
     true
 ] call CBA_fnc_addSetting;
 //Amount of radios to restore
@@ -19,7 +19,7 @@
         "Amount of radios to restore",
         "Setting does nothing at the moment."
     ],    
-    "ACRE2-Persistence",
+    "ACRE2 Persistence",
     [1, 10, 6, 0, false]
 ] call CBA_fnc_addSetting;
 //Only restore radios on exact match
@@ -30,6 +30,6 @@
         "Only restore radios on exact match",
         "Setting does nothing at the moment."
     ],    
-    "ACRE2-Persistence",
+    "ACRE2 Persistence",
     false
 ] call CBA_fnc_addSetting;
