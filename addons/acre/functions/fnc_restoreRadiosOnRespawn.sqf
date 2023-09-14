@@ -67,8 +67,8 @@ player addEventHandler ["Respawn",
 					[_radioID, _volume] call acre_api_fnc_setRadioVolume;
 					[_radioID, _spatial] call acre_api_fnc_setRadioSpatial;
 				} forEach _radios;
-			}, [_newUnit, _radioType, _radioChannel, _radioVolume, _radioSpatial, _pttList, _newRadioList], 3] call CBA_fnc_waitAndExecute; //delay 3 secs for new radio IDs
-		} forEach ["ACRE_PRC77", "ACRE_PRC117F", "ACRE_PRC148", "ACRE_PRC152", "ACRE_PRC343", "ACRE_SEM52SL", "ACRE_SEM70", "ACRE_BF888S"]; // for each available ACRE RADIO
+			}, [_newUnit, _radioType, _radioChannel, _radioVolume, _radioSpatial, _pttList, _newRadioList], 3] call CBA_fnc_waitAndExecute; //delay 3 secs for new radio IDs //TODO wait until ACRE initalized, not fixed time
+		} forEach ["ACRE_PRC77", "ACRE_PRC117F", "ACRE_PRC148", "ACRE_PRC152", "ACRE_PRC343", "ACRE_SEM52SL", "ACRE_SEM70", "ACRE_BF888S"]; // for each available ACRE RADIO //TODO CBA Setting to define which radios to restore
 		[{
 			params ["_newRadioList"];
 			//assign the radio IDs of those with assigned PTTs
@@ -76,6 +76,6 @@ player addEventHandler ["Respawn",
 			private _ptt2 = _newRadioList select 1; 
 			private _ptt3 = _newRadioList select 2; 
 			_pttNewRadioList = [ [_ptt1, _ptt2, _ptt3] ] call acre_api_fnc_setMultiPushToTalkAssignment; //assign new radios to old PTT setup
-		}, [_newRadioList], 5] call CBA_fnc_waitAndExecute; //delay 5 secs to allow above block to complete
+		}, [_newRadioList], 5] call CBA_fnc_waitAndExecute; //delay 5 secs to allow above block to complete //TODO set variable true in above block and wait until true
 	}
 ];
