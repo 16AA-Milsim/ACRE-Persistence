@@ -54,7 +54,7 @@ private _spatialsCopy = +_spatials;
 } forEach _radios;
 
 // Display appropriate hint message TODO: replace with CBA_fnc_notify
-hint (if (_foundMatchingRadios) then {
+hint (if _foundMatchingRadios then {
 	if (count _baseRadiosCopy == 0) then {
 		"Radio Settings Restored"
 	} else {
