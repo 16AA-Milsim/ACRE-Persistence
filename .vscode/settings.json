@@ -7,15 +7,15 @@
         "*.ext": "ext",
         "*.fsm": "ext"
     },
+    "psi-header.config.license" : "GPL-3.0-or-later",
     "psi-header.lang-config": [
         {
-            "license": "Custom",
+            "license": "GPL-3.0-or-later",
             "language": "sqf",
             "rootDirFileName": "mod.cpp",
-            "begin": "/*",
-            "prefix": "    ",
-            "end": "*/",
-            "forceToTop": true
+            "beforeHeader": ["#include \"script_component.hpp\""],
+            "forceToTop": true,
+            "blankLinesAfter": 1,
         }
     ],
     "psi-header.changes-tracking": {
@@ -25,27 +25,29 @@
         "modDateFormat": "YYYY-MM-DD",
         "autoHeader": "manualSave"
     },
-    "psi-header.license-text": [
-        "MIT License - http://www.opensource.org/licenses/MIT"
-    ],
     "psi-header.templates": [
         {
             "language": "sqf",
             "template": [
                 "File: <<filename>>",
-                "Author: KP Liberation Dev Team - https://github.com/KillahPotatoes",
+                "Author: <author>",
                 "Date: <<filecreated('YYYY-MM-DD')>>",
                 "Last Update:",
-                "License: MIT License - http://www.opensource.org/licenses/MIT",
+                "License: <<licensename>> - <<licenseurl>>",
                 "",
-                "Description:",
-                "    No description added yet.",
+                "Function description",
                 "",
-                "Parameter(s):",
-                "    _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]",
+                "Arguments:",
+                "0: Objects <ARRAY>",
+                "1: All <BOOL>",
                 "",
-                "Returns:",
-                "    Function reached the end [BOOL]"
+                "Return Value:",
+                "None",
+                "",
+                "Example:",
+                "[[bob, alice], false] call l6AA_main_fnc_example",
+                "",
+                "Public: No"
             ]
         }
     ],
