@@ -1,15 +1,16 @@
 #pragma sls disable file SQFVM-10005 //disable duplicate MACRO definition warning
 #include "script_component.hpp"
+private _category = "ACRE Persistence";
 
 //Restore radios on respawn?
 [
     QGVAR(restoreRadiosOnRespawn),
     "CHECKBOX",
     [
-        "Restore radios on respawn",
-        "Setting does nothing at the moment."
+        "Restore radio configuration",
+        "Restore radios on respawn. Works best if units spawn with the same gear they died with."
     ],
-    "ACRE2 Persistence",
+    [_category, "On respawn"],
     true
 ] call CBA_fnc_addSetting;
 //Which Radios to restore on respawn
@@ -17,11 +18,11 @@
     QGVAR(radioTypesToRestore),
     "EDITBOX",
     [
-        "Radio types to restore on respawn",
-        "Does not apply to radio persistence."
+        "Radio types to restore",
+        "Does not apply to radio persistence. In format: 'name1','name2', ..."
     ],
-    "ACRE2 Persistence",
-    ["ACRE_PRC77", "ACRE_PRC117F", "ACRE_PRC148", "ACRE_PRC152", "ACRE_PRC343", "ACRE_SEM52SL", "ACRE_SEM70", "ACRE_BF888S"]
+    [_category, "On respawn"],
+    ["'ACRE_PRC77', 'ACRE_PRC117F', 'ACRE_PRC148', 'ACRE_PRC152', 'ACRE_PRC343', 'ACRE_SEM52SL', 'ACRE_SEM70', 'ACRE_BF888S'"]
 
 ] call CBA_fnc_addSetting;
 //Amount of radios to restore
@@ -32,7 +33,7 @@
         "Amount of radios to restore",
         "Setting does nothing at the moment."
     ],
-    "ACRE2 Persistence",
+    [_category, "Persistence"],
     [1, 10, 6, 0, false]
 ] call CBA_fnc_addSetting;
 //Only restore radios on exact match
@@ -43,6 +44,6 @@
         "Only restore radios on exact match",
         "Setting does nothing at the moment."
     ],
-    "ACRE2 Persistence",
+    [_category, "Persistence"],
     false
 ] call CBA_fnc_addSetting;

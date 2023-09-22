@@ -7,6 +7,7 @@ player addEventHandler ["Respawn", {
     _newRadioList set [0, 1];
     _newRadioList set [1, 1];
     _newRadioList set [2, 1];
+    private _radioTypesToRestore = GVAR(radioTypesToRestore) splitString "', ";
     {
         private _radioType = _x;
         private _radios = [_radioType, _corpse] call acre_api_fnc_getAllRadiosByType; //return array of unique Radio IDs from corpse
@@ -70,7 +71,7 @@ player addEventHandler ["Respawn", {
             } forEach _radios;},
             [_newUnit, _radioType, _radioChannel, _radioVolume, _radioSpatial, _pttList, _newRadioList]
         ] call CBA_fnc_waitUntilAndExecute;
-    } forEach QGVAR(radioTypesToRestore);
+    } forEach _radioTypesToRestore;
     [
         {call acre_api_fnc_isInitialized},
         {
