@@ -42,7 +42,7 @@
                 "1: All <BOOL>",
                 "",
                 "Return Value:",
-                "None",
+                "Function reached the end [BOOL]",
                 "",
                 "Example:",
                 "[[bob, alice], false] call l6AA_main_fnc_example",

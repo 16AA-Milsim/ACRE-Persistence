@@ -5,30 +5,25 @@ class CfgVehicles {
             class ACRE_Interact {
                 class RadioSettings {
                     displayName = "Radio Settings";
-                    class showInstructions {
-                        displayName = "Instructions";
-                        condition = "true";
-                        statement = QUOTE(call FUNC(showInstructions));
-                    };
                     class showSavedRadioSettings {
                         displayName = "Show Saved Radio Settings";
                         condition = "true";
                         statement = QUOTE(call FUNC(showSavedRadioSettings));
                     };
-                    class restoreRadioSettings 
+                    class restoreRadioSettings
                     {
                         displayName = "<t color='#98d7ff'>Restore Radio Settings</t>";
-                        class confirmRestoreRadioSettings 
+                        class confirmRestoreRadioSettings
                         {
                             displayName = "<t color='#98d7ff'>Confirm</t>";
                             condition = "true";
                             statement = QUOTE(call FUNC(restoreRadioSettings));
                         };
                     };
-                    class saveRadioSettings 
+                    class saveRadioSettings
                     {
                         displayName = "<t color='#ffa4a4'>Save Radio Settings</t>";
-                        class confirmSaveRadioSettings 
+                        class confirmSaveRadioSettings
                         {
                             displayName = "<t color='#ffa4a4'>Confirm</t>";
                             condition = "true";

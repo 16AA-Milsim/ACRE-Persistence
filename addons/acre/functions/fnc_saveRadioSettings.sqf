@@ -1,4 +1,24 @@
 #include "script_component.hpp"
+/*
+ * File: fnc_saveRadioSettings.sqf
+ * Author: Darojax, KrippeJaevel, Mildly_Interested
+ * Date: 2023-08-24
+ * Last Update: 2023-09-22
+ * License: GNU General Public License v3.0 or later - https://www.gnu.org/licenses/gpl-3.0-standalone.html
+ *
+ * Gets the current radio settings and saves them to the profileNamespace.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Function reached the end [BOOL]
+ *
+ * Example:
+ * call l6AA_acre_fnc_saveRadioSettings;
+ *
+ * Public: No
+ */
 
 private _baseRadios = [];
 private _channels = [];
@@ -55,3 +75,5 @@ profileNamespace setVariable [QGVAR(volumes), _volumes];
 profileNamespace setVariable [QGVAR(spatials), _spatials];
 
 ["acre_persistence", "ACRE Persistence", "Radio Settings Saved", "", -1, [0.13, 0.61, 0.12, 1]] call acre_sys_list_fnc_displayHint;
+
+true

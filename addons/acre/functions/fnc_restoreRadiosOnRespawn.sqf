@@ -1,8 +1,28 @@
 #include "script_component.hpp"
+/*
+ * File: fnc_restoreRadiosOnRespawn.sqf
+ * Author: Darojax, KrippeJaevel, Mildly_Interested
+ * Date: 2023-08-24
+ * Last Update: 2023-09-22
+ * License: GNU General Public License v3.0 or later - https://www.gnu.org/licenses/gpl-3.0-standalone.html
+ *
+ * Adds respawn event handler to restore radios on respawn.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Function reached the end [BOOL]
+ *
+ * Example:
+ * call l6AA_acre_fnc_restoreRadiosOnRespawn
+ *
+ * Public: No
+ */
 
-//restore radio settings on respawn
 player addEventHandler ["Respawn", {
     params ["_unit", "_corpse", "_newRadioList"];
+    if !QGVAR(restoreRadiosOnRespawn) exitWith {};
     _newRadioList = [];
     _newRadioList set [0, 1];
     _newRadioList set [1, 1];
@@ -85,3 +105,5 @@ player addEventHandler ["Respawn", {
         [_newRadioList]
     ] call CBA_fnc_waitUntilAndExecute;
 }];
+
+true

@@ -2,4 +2,5 @@
 
 // only executed on client
 
-call FUNC(printAddonName);
+call FUNC(createDiaryInstructions);
+call FUNC(restoreRadiosOnRespawn);

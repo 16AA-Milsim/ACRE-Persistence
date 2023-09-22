@@ -1,4 +1,24 @@
 #include "script_component.hpp"
+/*
+ * File: fnc_showSavedRadioSettings.sqf
+ * Author: Darojax, KrippeJaevel, Mildly_Interested
+ * Date: 2023-08-28
+ * Last Update: 2023-09-22
+ * License: GNU General Public License v3.0 or later - https://www.gnu.org/licenses/gpl-3.0-standalone.html
+ *
+ * Get the saved radio settings from the profileNamespace and display them as a hint.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Function reached the end [BOOL]
+ *
+ * Example:
+ * call l6AA_acre_fnc_showSavedRadioSettings;
+ *
+ * Public: No
+ */
 
 // Get the profileNamespace Radio Settings variables
 private _baseRadios = profileNamespace getVariable [QGVAR(baseRadios), []];
@@ -28,3 +48,5 @@ private _hintString = [["SAVED RADIO SETTINGS", 1.2]];
 	_hintString pushBack [_tempString]
 } forEach _baseRadios;
 _hintString call CBA_fnc_notify;
+
+true

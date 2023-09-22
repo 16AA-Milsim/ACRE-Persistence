@@ -1,4 +1,24 @@
 #include "script_component.hpp"
+/*
+ * File: fnc_restoreRadioSettings.sqf
+ * Author: Darojax, KrippeJaevel, Mildly_Interested
+ * Date: 2023-08-24
+ * Last Update: 2023-09-22
+ * License: GNU General Public License v3.0 or later - https://www.gnu.org/licenses/gpl-3.0-standalone.html
+ *
+ * Get radio config from profileNamespace and apply to radios in player's inventory.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Function reached the end [BOOL]
+ *
+ * Example:
+ * call l6AA_acre_fnc_restoreRadioSettings;
+ *
+ * Public: No
+ */
 
 // get saved variables/arrays from profileNamespace
 private _baseRadios = profileNamespace getVariable [QGVAR(baseRadios), []];
@@ -64,3 +84,5 @@ hint (if _foundMatchingRadios then {
 	"No matching radio types found"
 }
 );
+
+true
