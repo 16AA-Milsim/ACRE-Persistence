@@ -4,7 +4,7 @@
  * Author: Darojax, KrippeJaevel, Mildly_Interested
  * Date: 2023-08-24
  * Last Update: 2023-09-22
- * License: GNU General Public License v3.0 or later - https://www.gnu.org/licenses/gpl-3.0-standalone.html
+ * License: License: GNU General Public License v3.0 only - https://www.gnu.org/licenses/gpl-3.0-standalone.html
  *
  * Gets the current radio settings and saves them to the profileNamespace.
  *

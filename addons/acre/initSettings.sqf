@@ -36,14 +36,27 @@ private _category = "ACRE Persistence";
     [_category, "Persistence"],
     [1, 10, 6, 0, false]
 ] call CBA_fnc_addSetting;
-//Only restore radios on exact match
+//Default speech volume normal bod
 [
-    QGVAR(exactMatch),
-    "CHECKBOX",
+    QGVAR(defaultSpeechVolume),
+    "LIST",
+    ["Default volume", LSTRING(StartBppVolume_Description)],
+    [_category, "Volume"],
     [
-        "Only restore radios on exact match",
-        "Setting does nothing at the moment."
-    ],
-    [_category, "Persistence"],
-    false
+        [0, 1, 2, 3, 4],
+        ["Whisper", "Quiet", "Normal", "Loud", "Shout"],
+        1
+    ]
+] call CBA_fnc_addSetting;
+//Default speech volume group leader
+[
+    QGVAR(defaultSpeechVolumeLeader),
+    "LIST",
+    ["Default volume leader", LSTRING(StartLeaderVolume_Description)],
+    [_category, "Volume"],
+    [
+        [0, 1, 2, 3, 4],
+        ["Whisper", "Quiet", "Normal", "Loud", "Shout"],
+        1
+    ]
 ] call CBA_fnc_addSetting;

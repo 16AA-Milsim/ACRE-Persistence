@@ -4,3 +4,4 @@
 
 call FUNC(createDiaryInstructions);
 call FUNC(restoreRadiosOnRespawn);
+call FUNC(adjustVoiceVolume);

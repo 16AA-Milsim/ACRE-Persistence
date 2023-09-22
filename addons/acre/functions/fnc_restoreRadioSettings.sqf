@@ -4,7 +4,7 @@
  * Author: Darojax, KrippeJaevel, Mildly_Interested
  * Date: 2023-08-24
  * Last Update: 2023-09-22
- * License: GNU General Public License v3.0 or later - https://www.gnu.org/licenses/gpl-3.0-standalone.html
+ * License: License: GNU General Public License v3.0 only - https://www.gnu.org/licenses/gpl-3.0-standalone.html
  *
  * Get radio config from profileNamespace and apply to radios in player's inventory.
  *
@@ -58,7 +58,7 @@ private _volumesCopy = +_volumes;
 private _spatialsCopy = +_spatials;
 
 {
-	if (_forEachIndex >= 6) exitWith {};
+	if (_forEachIndex >= GVAR(amountOfRadiosToRestore)) exitWith {};
 	_currentBaseRadio = [_x] call acre_api_fnc_getBaseRadio;
 	_index = _baseRadiosCopy find _currentBaseRadio;
 

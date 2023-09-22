@@ -7,10 +7,9 @@
         "*.ext": "ext",
         "*.fsm": "ext"
     },
-    "psi-header.config.license" : "GPL-3.0-or-later",
+    "psi-header.config.license" : "GPL-3.0-only",
     "psi-header.lang-config": [
         {
-            "license": "GPL-3.0-or-later",
             "language": "sqf",
             "rootDirFileName": "mod.cpp",
             "beforeHeader": ["#include \"script_component.hpp\""],
