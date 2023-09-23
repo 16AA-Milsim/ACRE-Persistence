@@ -6,8 +6,10 @@ mainprefix = "z"
 [files]
 include = [
     "mod.cpp",
+    "meta.cpp",
     "*.paa"
 ]
 
 [version]
 git_hash = 0 # Disabled
+path = "addons/main/script_version.hpp"

@@ -51,7 +51,7 @@ private _category = "ACRE Persistence";
     "EDITBOX",
     [
         "Radio types to restore",
-        "Does not apply to radio persistence. In format: 'name1','name2', ..."
+        "In format: 'name1','name2', ...."
     ],
     [_category, "On respawn"],
     ["'ACRE_PRC77', 'ACRE_PRC117F', 'ACRE_PRC148', 'ACRE_PRC152', 'ACRE_PRC343', 'ACRE_SEM52SL', 'ACRE_SEM70', 'ACRE_BF888S'"]
@@ -63,7 +63,7 @@ private _category = "ACRE Persistence";
     "SLIDER",
     [
         "Timout for restoring radios",
-        "Wait x seconds for radios to be in inventory before restoring them, skip after. Useful if you add radios to units after they spawn. Set to -1 to never timeout."
+        "Skip restoring radios if unit has no radios equipped after x seconds. Useful if you add radios to units after they spawn. Set to -1 to never timeout."
     ],
     [_category, "On respawn"],
     [-1, 15, 5, 0, false]

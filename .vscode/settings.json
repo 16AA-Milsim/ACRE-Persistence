@@ -3,7 +3,7 @@
         "*.hpp": "sqf",
         "*.h":   "ext",
         "*.inc": "ext",
-        "*.cpp": "ext",
+        "*.cpp": "sqf",
         "*.ext": "ext",
         "*.fsm": "ext"
     },
