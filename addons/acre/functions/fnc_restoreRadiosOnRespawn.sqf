@@ -1,4 +1,3 @@
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 /*
  * File: fnc_restoreRadiosOnRespawn.sqf
@@ -21,7 +20,7 @@
  * Public: No
  */
 
-player addEventHandler ["Respawn", { //TODO maybe just replace with new functions as seen in restoreRadioSettings
+player addEventHandler ["Respawn", {
     params ["_unit", "_corpse"];
     if !GVAR(restoreRadiosOnRespawn) exitWith {false};
     private _radioTypesToRestore = GVAR(radioTypesToRestore) splitString "', ";
@@ -105,7 +104,8 @@ player addEventHandler ["Respawn", { //TODO maybe just replace with new function
                 };
             } forEach _radios;
         },
-        [_baseRadios, _channels, _volumes, _spatials, _unit]
+        [_baseRadios, _channels, _volumes, _spatials, _unit],
+        GVAR(restoreRadiosOnRespawnDelay)
     ] call CBA_fnc_waitUntilAndExecute;
 
 }];

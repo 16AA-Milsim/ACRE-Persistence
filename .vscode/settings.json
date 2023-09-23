@@ -1,6 +1,6 @@
 {
     "files.associations": {
-        "*.hpp": "ext",
+        "*.hpp": "sqf",
         "*.h":   "ext",
         "*.inc": "ext",
         "*.cpp": "ext",

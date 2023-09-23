@@ -1,7 +1,39 @@
 #pragma sls disable file SQFVM-10005 //disable duplicate MACRO definition warning
 #include "script_component.hpp"
+/*
+ * File: initSettings.sqf
+ * Author: Mildly_Interested, 3Mdylo3
+ * Date: 2023-08-01
+ * Last Update: 2023-09-23
+ * License: GNU General Public License v3.0 only - https://www.gnu.org/licenses/gpl-3.0-standalone.html
+ *
+ * Sets up CBA settings for the ACRE submodule.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * None
+ *
+ * Public: No
+ */
+
 private _category = "ACRE Persistence";
 
+//Amount of radios to restore
+[
+    QGVAR(amountOfRadiosToRestore),
+    "SLIDER",
+    [
+        "Number of radios to restore",
+        "How many radio configurations to restore, applies to respawn and persistence. PTT assigned radios are first in the list."
+    ],
+    _category,
+    [1, 10, 6, 0, false]
+] call CBA_fnc_addSetting;
 //Restore radios on respawn?
 [
     QGVAR(restoreRadiosOnRespawn),
@@ -25,38 +57,44 @@ private _category = "ACRE Persistence";
     ["'ACRE_PRC77', 'ACRE_PRC117F', 'ACRE_PRC148', 'ACRE_PRC152', 'ACRE_PRC343', 'ACRE_SEM52SL', 'ACRE_SEM70', 'ACRE_BF888S'"]
 
 ] call CBA_fnc_addSetting;
-//Amount of radios to restore
+//Respawn restore timeout
 [
-    QGVAR(amountOfRadiosToRestore),
+    QGVAR(restoreRadiosOnRespawnDelay),
     "SLIDER",
     [
-        "Amount of radios to restore",
-        "Setting does nothing at the moment."
+        "Timout for restoring radios",
+        "Wait x seconds for radios to be in inventory before restoring them, skip after. Useful if you add radios to units after they spawn. Set to -1 to never timeout."
     ],
-    [_category, "Persistence"],
-    [1, 10, 6, 0, false]
+    [_category, "On respawn"],
+    [-1, 15, 5, 0, false]
 ] call CBA_fnc_addSetting;
 //Default speech volume normal bod
 [
     QGVAR(defaultSpeechVolume),
     "LIST",
-    ["Default volume", LSTRING(StartBppVolume_Description)],
+    [
+        "Default volume",
+        "Speech volume players of players after spawning in."
+    ],
     [_category, "Volume"],
     [
         [0, 1, 2, 3, 4],
         ["Whisper", "Quiet", "Normal", "Loud", "Shout"],
-        1
+        2
     ]
 ] call CBA_fnc_addSetting;
 //Default speech volume group leader
 [
     QGVAR(defaultSpeechVolumeLeader),
     "LIST",
-    ["Default volume leader", LSTRING(StartLeaderVolume_Description)],
+    [
+        "Default volume leader",
+        "Speech volume players of group leaders after spawning in."
+    ],
     [_category, "Volume"],
     [
         [0, 1, 2, 3, 4],
         ["Whisper", "Quiet", "Normal", "Loud", "Shout"],
-        1
+        2
     ]
 ] call CBA_fnc_addSetting;

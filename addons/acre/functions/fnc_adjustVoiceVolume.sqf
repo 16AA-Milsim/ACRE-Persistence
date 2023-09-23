@@ -3,7 +3,7 @@
  * File: fnc_adjustVoiceVolume.sqf
  * Author: 3Mdylo3, Mildly_Interested
  * Date: 2023-09-22
- * Last Update: 2023-09-22
+ * Last Update: 2023-09-23
  * License: GNU General Public License v2.0 only - https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html
  *
  * Adjusts default direct speech volume for local player based on CBA settings.
@@ -37,7 +37,7 @@ private _volume = switch (round _volumeLevel) do {
     {
         params ["_volume", "_volumeLevel"];
         [_this] call acre_api_fnc_setSelectableVoiceCurve;
-        [{acre_sys_gui_volumeLevel = _this;}, round _volumeLevel / 4] call CBA_fnc_execNextFrame; //TODO am I allowed to do this?
+        [{acre_sys_gui_volumeLevel = _this;}, round _volumeLevel / 4] call CBA_fnc_execNextFrame;
     },
     [_volume, _volumeLevel]
 ] call CBA_fnc_waitUntilAndExecute;
