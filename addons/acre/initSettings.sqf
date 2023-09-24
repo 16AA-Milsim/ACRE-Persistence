@@ -2,9 +2,9 @@
 #include "script_component.hpp"
 /*
  * File: initSettings.sqf
- * Author: Mildly_Interested, 3Mdylo3
+ * Author: Mildly_Interested, 3Mydlo3
  * Date: 2023-08-01
- * Last Update: 2023-09-23
+ * Last Update: 2023-09-24
  * License: GNU General Public License v3.0 only - https://www.gnu.org/licenses/gpl-3.0-standalone.html
  *
  * Sets up CBA settings for the ACRE submodule.

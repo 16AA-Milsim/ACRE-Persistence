@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 /*
  * File: fnc_adjustVoiceVolume.sqf
- * Author: 3Mdylo3, Mildly_Interested
+ * Author: 3Mydlo3, Mildly_Interested
  * Date: 2023-09-22
- * Last Update: 2023-09-23
+ * Last Update: 2023-09-24
  * License: GNU General Public License v2.0 only - https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html
  *
  * Adjusts default direct speech volume for local player based on CBA settings.
