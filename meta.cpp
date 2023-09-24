@@ -1,4 +1,3 @@
-#include "script_component.hpp"
 /*
  * File: meta.cpp
  * Author: Mildly_Interested
