@@ -74,7 +74,7 @@ private _category = "ACRE Persistence";
     "LIST",
     [
         "Default volume",
-        "Speech volume players of players after spawning in."
+        "Speech volume of players after spawning in."
     ],
     [_category, "Volume"],
     [
@@ -89,7 +89,7 @@ private _category = "ACRE Persistence";
     "LIST",
     [
         "Default volume leader",
-        "Speech volume players of group leaders after spawning in."
+        "Speech volume of group leaders after spawning in."
     ],
     [_category, "Volume"],
     [

@@ -19,7 +19,7 @@
  *
  * Public: No
  */
-//TODO ask re licensing
+
 private _volumeLevel = [GVAR(defaultSpeechVolume), GVAR(defaultSpeechVolumeLeader)] select (player isEqualTo leader player);
 
 private _volume = switch (round _volumeLevel) do {
@@ -33,10 +33,10 @@ private _volume = switch (round _volumeLevel) do {
 
 
 [
-    {call acre_api_fnc_isInitialized},
+    {[] call acre_api_fnc_isInitialized;},
     {
         params ["_volume", "_volumeLevel"];
-        [_this] call acre_api_fnc_setSelectableVoiceCurve;
+        [_volume] call acre_api_fnc_setSelectableVoiceCurve;
         [{acre_sys_gui_volumeLevel = _this;}, round _volumeLevel / 4] call CBA_fnc_execNextFrame;
     },
     [_volume, _volumeLevel]
