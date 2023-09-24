@@ -1,44 +1,60 @@
-**************************************
-*** Easy to expand on mod template ***
-**************************************
-To use for your own project:
+# ACRE-Persistence
+Save your radio configuration between missions and restore it automatically upon respawn.
 
-> At root folder:
+## Features
+- Save and load your radio configuration between sessions
+- Restore radio configuration on respawn
+- Configure default speech volume for group leaders and players
 
-    mod.cpp:
-        * change <Name>, <Author> and <Prefix> to your mod. Prefix is TAG
+## Requirements
+- CBA
+- ACRE
+- ACE
+## Download
+Steam workshop: TBD  
+Github: [Releases tab](https://github.com/16AA-Milsim/ACRE-Persistence/releases)  
 
-    icons and title .paa files:
-        * replace with your own branding
+## Usage
+Detailed instructions can be found in the diary section on the map screen.
 
-> in .hemtt/
+![ace self interact](data/acre_persistence_ace-interact.gif)
 
-        * change <Name>, <Author> and <Prefix> to your mod. Prefix is TAG
+### Configuration
+All configuration is done via CBA settings.
 
-> in addons\ :
+![CBA Settings](data/CBA_settings.png)
 
-    main:
-        stays as is, mostly. Use for shared macros (in main/script_macros.hpp) and to increase version (in main/script_version.hpp)
-        
-        * change all occurences of "TAG" to your actual tag in all files
-        * change <Name>, <Author> and <Prefix> in main/config.cpp to your mod. Prefix is TAG
-        * Entries in mod.cpp and CfgMods of main/config.cpp are duplicate, I can't quite tell when which is used, so maybe just keep them synced
+### Limitations
+- The power state of radios cannot be saved or restored, if you'd like to disable radios turn their volume to 0.
+- The radio configuration data is specific to your used Arma 3 profile, if you switch profiles it won't be available.
 
+## FAQ
+#### Is this a clientside mod?
+Yes, it's an optional clientside mod because everything runs locally on the player.
 
-    addon_template:
+#### Can I include this mod in our repacked modpack?
+If you really want to, yes. But you will have to provide the full source of your modpack as mandated by this mods [GPLv3 license](/LICENSE). If you're worried about the 25 mods limit in the Arma launcher, increase your [steamProtocolMaxDataSize](https://community.bistudio.com/wiki/Arma_3:_Server_Config_File) in your server.cfg file. Makes your life easier and mine.
 
-        template for your actual content addons. Rename to your addon. (there is a copy under /templates/)
+#### Will this create any radios?
+No, it only restores the radios configuration, if you are missing radios it will attempt to restore as much as possible.
 
-        * change all occurences of "addon_template" to your addon folder name (probably doesn't have to be lowercase)
-        * change all occurences of "ADDON_TEMPLATE" to the same tag, just all caps (used in #defines)
-        * change all occurences of "TAG" to your actual tag in all files
+#### Will this break ACRE?
+It *shouldn't*, 16AA has been running a script version of this for about a year now without any issues. We are only using documented, public ACRE functions and are not copying any radio IDs.
 
-> hemtt batch files
+#### How do I report bugs?
+Head to the [Issues tab](https://github.com/16AA-Milsim/ACRE-Persistence/issues/new) and fill out the template! Include as much detail as possible so we can reproduce the bug.
 
-!! hemtt needs to be installed in system path or mod directory, otherwise you need to adjust the paths in the batch files !!
+## Contribute
+
+This mod uses [HEMTT](https://github.com/BrettMayson/HEMTT). Download the latest .exe and add it to this repo or to your PATH.  
+Thanks to @TACHarsis for providing a [mod template](https://github.com/TACHarsis/hemtt-mod-template) that got all this started.  
+The default speech volume functionality has been provided by @3Mydlo3 at [ArmaForces](https://armaforces.com/), thanks for that!  
 
     build.bat           - to build without signing. Will build into '.hemttout\build' directory.
     build_dev.bat           - to build dev version, set up for file patching with associated softlinks. Will build into '.hemttout\dev' directory.
     build_release.bat   - to build ready for release with signing.  Will build into '.hemttout\release' directory.
 
-If you just build mod as is, your mod will be called "My Cool Mod" and do nothing but put out a chat message when you enter a mission/editor preview.
+
+## Images
+![saved settings](data/saved_settings.png)
+![diary entry](data/diary_entry.png)

@@ -3,7 +3,7 @@
  * File: fnc_saveRadioSettings.sqf
  * Author: Darojax, KrippeJaevel, Mildly_Interested
  * Date: 2023-08-24
- * Last Update: 2023-09-22
+ * Last Update: 2023-09-24
  * License: License: GNU General Public License v3.0 only - https://www.gnu.org/licenses/gpl-3.0-standalone.html
  *
  * Gets the current radio settings and saves them to the profileNamespace.
@@ -31,7 +31,7 @@ private _pttAssignment = call acre_api_fnc_getMultiPushToTalkAssignment;
 
 // Check if the player is carrying any radios, if not, show the hint and exit
 if (count _radios == 0) exitWith {
-	["acre_persistence", "ACRE Persistence", "You are not carrying any radios", "Nothing to save", -1, [1, 0.8, 0, 1]] call acre_sys_list_fnc_displayHint;
+	["acre_persistence", "ACRE Persistence", "You are not carrying any radios", "Nothing to save", 3, [1, 0.8, 0, 1]] call acre_sys_list_fnc_displayHint;
 };
 
 // Rearrange the radios in the _radios array to set the PTT radios first
@@ -74,6 +74,6 @@ profileNamespace setVariable [QGVAR(channels), _channels];
 profileNamespace setVariable [QGVAR(volumes), _volumes];
 profileNamespace setVariable [QGVAR(spatials), _spatials];
 
-["acre_persistence", "ACRE Persistence", "Radio Settings Saved", "", -1, [0.13, 0.61, 0.12, 1]] call acre_sys_list_fnc_displayHint;
+["acre_persistence", "ACRE Persistence", "Radio Settings Saved", "", 3, [0.13, 0.61, 0.12, 1]] call acre_sys_list_fnc_displayHint;
 
 true

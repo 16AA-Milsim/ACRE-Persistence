@@ -3,7 +3,7 @@
  * File: fnc_showSavedRadioSettings.sqf
  * Author: Darojax, KrippeJaevel, Mildly_Interested
  * Date: 2023-08-28
- * Last Update: 2023-09-22
+ * Last Update: 2023-09-24
  * License: License: GNU General Public License v3.0 only - https://www.gnu.org/licenses/gpl-3.0-standalone.html
  *
  * Get the saved radio settings from the profileNamespace and display them as a hint.
@@ -28,7 +28,7 @@ private _spatials = profileNamespace getVariable [QGVAR(spatials), []];
 
 // Check if previous settings exist, if not exit with a hint
 if (_baseRadios isEqualTo []) exitWith {
-	["acre_persistence", "ACRE Persistence", "There are no saved settings", "", -1, [1, 0.8, 0, 1]] call acre_sys_list_fnc_displayHint;
+	["acre_persistence", "ACRE Persistence", "There are no saved settings", "", 3, [1, 0.8, 0, 1]] call acre_sys_list_fnc_displayHint;
 };
 
 // Create a formatted string with the radio information and the Push To Talk assignment and Display as hint
