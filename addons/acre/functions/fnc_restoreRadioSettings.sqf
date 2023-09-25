@@ -3,7 +3,7 @@
  * File: fnc_restoreRadioSettings.sqf
  * Author: Darojax, KrippeJaevel, Mildly_Interested
  * Date: 2023-08-24
- * Last Update: 2023-09-24
+ * Last Update: 2023-09-25
  * License: License: GNU General Public License v3.0 only - https://www.gnu.org/licenses/gpl-3.0-standalone.html
  *
  * Get radio config from profileNamespace and apply to radios in player's inventory.
@@ -73,12 +73,11 @@ private _spatialsCopy = +_spatials;
 	};
 } forEach _radios;
 
-// Display appropriate hint message TODO: replace with CBA_fnc_notify
 if (_foundMatchingRadios) then {
     if (count _baseRadiosCopy == 0) then {
-        ["acre_persistence", "ACRE Persistence", "Radio Settings Restored", "", 3, [0.29, 1, 0.16, 1]] call acre_sys_list_fnc_displayHint;
+        ["acre_persistence", "ACRE Persistence", "Radio Settings restored", "", 3, [0.29, 1, 0.16, 1]] call acre_sys_list_fnc_displayHint;
     } else {
-        ["acre_persistence", "ACRE Persistence", "Radio settings partially restored", "Missing radios in your inventory", 3, [1, 0.8, 0, 1]] call acre_sys_list_fnc_displayHint;
+        ["acre_persistence", "ACRE Persistence", "Radio Settings partially sestored", "Missing radios in your inventory", 3, [1, 0.8, 0, 1]] call acre_sys_list_fnc_displayHint;
     };
 } else {
     ["acre_persistence", "ACRE Persistence", "No matching radio types found", "", 3, [1, 0.29, 0.16, 1]] call acre_sys_list_fnc_displayHint;
