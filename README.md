@@ -4,7 +4,7 @@ Save your radio configuration between missions and restore it automatically upon
 ## Features
 - Save and load your radio configuration between sessions
 - Restore radio configuration on respawn
-- Configure default speech volume for group leaders and players
+- Configure default direct speech volume for group leaders and players
 
 ## Requirements
 - CBA
@@ -77,7 +77,7 @@ The default speech volume functionality has been provided by @3Mydlo3 at [ArmaFo
  `l6AA_acre_fnc_adjustVoiceVolume` adjusts the direct speech volume after spawn in, it runs multiple times checking if the player is initialized fully (that's the 38 counts) and then completes it's run. It will increase the length of 38 frames by roughly 118.33 μs which would lower your FPS from 50 to 49.53 until the script completes or times out after 5 seconds.  
  `l6AA_acre_fnc_restoreRadiosOnRespawn` runs on every respawn, copying the radio configuration from your corpse and applying it to your new radios. It wil lower your FPS from 50 to 49.98 for a single frame.
  `l6AA_acre_fnc_saveRadioSettings` saves your radio configuration to your ProfileNamespace so you can restore it sometime else. It is quite FPS intensive because it writes to a file (`vars.Arma3Profile`), it will lower your FPS from 50 to 46.5 for a single frame.  
- `l6AA_acre_fnc_restoreRadioSettings` is similar, it has to read from a file and then restore the radio configuration. It will lower your FPS from 50 to 42.8 for a single frame.
- `l6AA_acre_fnc_showSavedRadioSettings` also needs to read from a file and then display your saved settings. It will lower your FPS from 50 to 48.8 for a single frame.  
+ `l6AA_acre_fnc_restoreRadioSettings` is similar, it has to read from a file and then restore the radio configuration. It will lower your FPS from 50 to 42.8 for a single frame.  
+ `l6AA_acre_fnc_showSavedRadioSettings` also needs to read from a file and then display your saved settings. It will lower your FPS from 50 to 48.8 for a single frame.    
   
 </details>
