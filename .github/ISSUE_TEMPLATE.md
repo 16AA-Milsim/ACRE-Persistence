@@ -20,11 +20,11 @@ I ACKNOWLEDGE THE FOLLOWING BEFORE PROCEEDING:
 All good? Then proceed and fill out all items below.
 -->
 
-**Modlist and KAT Version will be auto extracted from your attached RPT**
+**Modlist and ACRE-Persistence Version will be auto extracted from your attached RPT**
 Make sure to attach it to this report!
 
 **CBA Settings**
-<!-- Add a export of your relevant CBA settings here (ACE Medical and all KAT related settings). Go to addon options, server or missions tab and then click export to copy them to your clipboard. -->
+<!-- Add a export of your relevant CBA settings here (ACRE-Persistence settings and ACRE if applicable). Go to addon options, server or missions tab and then click export to copy them to your clipboard. -->
 <details>
   <summary>CBA Settings</summary>
 
