@@ -12,8 +12,8 @@ Save your radio configuration between missions and restore it automatically upon
 - ACE
   
 ## Download
-Steam workshop: TBD  
-Github: [Releases tab](https://github.com/16AA-Milsim/ACRE-Persistence/releases)  
+[Steam workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3043180500)  
+[Github](https://github.com/16AA-Milsim/ACRE-Persistence/releases)  
 
 ## Usage
 Detailed instructions can be found in the diary section on the map screen.
