@@ -4,7 +4,7 @@
  * File: initSettings.sqf
  * Author: Mildly_Interested, 3Mydlo3
  * Date: 2023-08-01
- * Last Update: 2023-09-24
+ * Last Update: 2023-09-30
  * License: GNU General Public License v3.0 only - https://www.gnu.org/licenses/gpl-3.0-standalone.html
  *
  * Sets up CBA settings for the ACRE submodule.
@@ -62,7 +62,7 @@ private _category = "ACRE Persistence";
     QGVAR(restoreRadiosOnRespawnDelay),
     "SLIDER",
     [
-        "Timout for restoring radios",
+        "Timeout for restoring radios",
         "Skip restoring radios if unit has no radios equipped after x seconds. Useful if you add radios to units after they spawn. Set to -1 to never timeout."
     ],
     [_category, "On respawn"],
@@ -89,7 +89,7 @@ private _category = "ACRE Persistence";
     "LIST",
     [
         "Default volume leader",
-        "Speech volume of group leaders after spawning in."
+        "Speech volume of group leaders after spawning in. Whoever spawns in first in a group is group leader until the 'true' group leader spawns."
     ],
     [_category, "Volume"],
     [
